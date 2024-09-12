@@ -28,9 +28,21 @@ public class Switch03 {
         Write a program that determines the season according to the entered month number and prints the result to the console.
         */
 
-        Scanner input = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         System.out.print("Lutfen ay numarasini giriniz (1-12) : ");
-        int month = input.nextInt();
+        int month = scanner.nextInt();
+
+        String season = switch (month) {
+            case 12, 1, 2 -> "Kis";
+            case 3, 4, 5 -> "Ilkbahar";
+            case 6, 7, 8 -> "Yaz";
+            case 9, 10, 11 -> "Sonbahar";
+            default -> "Bilinmeyen ay";
+        };
+
+        System.out.println("Mevsim : " + season);
+
+        scanner.close(); // Scanner objesi kapatildi
     }
 }
