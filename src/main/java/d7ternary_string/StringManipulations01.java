@@ -77,5 +77,14 @@ public class StringManipulations01 {
 
         boolean isStart = s.startsWith("J");
         System.out.println(isStart); // true
+
+        // Ornek 8: "s" String'inin "easy" ile bitip bitmedigini kontrol ediniz.
+        // Example 8: Check if the string "s" ends with "easy".
+
+        // endsWith() methodu bir Strig'in son karakterini/karakterlerini kontrol eder
+        // endsWith() methodu boolean return eder.
+
+        boolean isEnd = s.endsWith("y");
+        System.out.println(isEnd); // true
     }
 }
