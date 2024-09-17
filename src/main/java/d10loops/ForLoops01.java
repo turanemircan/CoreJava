@@ -1,4 +1,4 @@
-package d9string_loops;
+package d10loops;
 
 public class ForLoops01 {
     public static void main(String[] args) {
@@ -34,7 +34,7 @@ public class ForLoops01 {
         System.out.println("Hi");
         System.out.println("Hi");
 
-        System.out.println("----------------------");
+        System.out.println("----------------------------------------------");
 
         // 2. Yol:
 
@@ -48,6 +48,34 @@ public class ForLoops01 {
 
         for (int i = 0; i < 4; i++) {
             System.out.println("Hi");
+        }
+
+        System.out.println("----------------------------------------------");
+
+        // -------------------------------------------------------------------------------------
+
+        // Ornek 2: 20(dahil) den 3(dahil) e kadar tum tamsayilari console’a yazdiriniz.
+        // Example 2: Write all integers from 20(inclusive) to 3(inclusive) to console
+
+        for (int i = 20; i >= 3; i--) {
+            System.out.print(i + " "); // 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3
+        }
+
+        System.out.println();
+
+        // Ornek 3: 3'den 20'ye kadar tum cift sayilari console’a yazdiriniz(20 dahil)
+        // Example 3: Write all even numbers from 3 to 20 to the console (including 20)
+
+        for (int i = 3; i < 21; i++) {
+            if (i % 2 == 0) {
+                System.out.print(i + " "); // 4 6 8 10 12 14 16 18 20
+            }
+        }
+
+        // 2. yol:
+        System.out.println("\n----------------------------------------------");
+        for (int i = 4; i < 21; i += 2) {
+            System.out.print(i + " ");
         }
     }
 }
