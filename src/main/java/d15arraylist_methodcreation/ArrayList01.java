@@ -1,6 +1,9 @@
-package d14multidimensionalarrays_arraylist;
+package d15arraylist_methodcreation;
 
-public class ArrayList03 {
+import java.util.ArrayList;
+import java.util.List;
+
+public class ArrayList01 {
     public static void main(String[] args) {
 
         // Ornek 1: Tekrarli elemanlari olan bir listten, tekrarsiz elemanlari olan bir list elde ediniz.
@@ -13,5 +16,21 @@ public class ArrayList03 {
         // List'i kullanmak, kodunuzun daha esnek ve uyumlu olmasını sağlar.
         // List tipinde bir değişken tanımladığınızda, bu değişkenin farklı List implementasyonlarını
         // (örneğin ArrayList, LinkedList, Vector vb.) tutabilmesi mümkündür.
+
+        List<Character> a = new ArrayList<>();
+        a.add('J');
+        a.add('a');
+        a.add('v');
+        a.add('a');
+        a.add('v');
+        System.out.println(a); // [J, a, v, a, v]
+
+        List<Character> b = new ArrayList<>();
+        for (Character w : a) {
+            if (!b.contains(w)) { // b listinde donguden gelen eleman yoksa
+                b.add(w); // b listine gelen elemana ekle
+            }
+        }
+        System.out.println(b); // [J, a, v]
     }
 }
