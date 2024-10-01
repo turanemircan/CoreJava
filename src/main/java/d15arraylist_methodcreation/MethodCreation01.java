@@ -25,6 +25,9 @@ public class MethodCreation01 {
     // ornek 1: Toplama yapan bir method olusturunuz.
     // Example 1: Create a method that performs addition
 
+    // 1- main metodunda sum(10, 20) çağrısında 10 ve 20 değerleri argümanlardır.
+    // 2- sum metodunun tanımında a ve b parametrelerdir.
+
     public static double sum(double num01, double num02) {
         return num01 + num02;
     }
