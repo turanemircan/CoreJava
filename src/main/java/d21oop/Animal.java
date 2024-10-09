@@ -1,4 +1,4 @@
-package d20staticblock_instanceblock_oop;
+package d21oop;
 
 public class Animal {
 
@@ -82,9 +82,65 @@ public class Animal {
     Yani, bir alt class üst class'in bir türüdür.
     */
 
+    // -------------------------------------------------------------------------------------
+
+    // 2.Polymorphism:
+    // Method Overloading + Method Overriding
+
+    // OOP'nin prensiplerinin 2.sidir. Polymorphism (cok bicimlilik) demektir.
+    // Bir method'u, istedigimiz sonuclari alacak sekilde, farkli farkli sekilllerde calistirabilmek icin kullanilir.
+
+    // iki cesidi var.
+
+    // i.Method Overloading: Bunu gormustuk
+
+    // ii.Method Overriding (gecersiz kilmak, agir basan)
+    // Child class’in Parent’taki methodu degistirerek kullanmasidir.
+
+    // -------------------------------------------------------------------------------------
+
+    //Override isleminde access modifier’larin durumlari ne olmalidir, onu ogrenelim
+
+    /*
+    Soru1: private method'lar override edilebilir mi?
+    Cevap1: private method'lar override edilemezler cunku
+    override edebilmek icin o method'a baska bir class'dan ulasabilmek gerekir.
+    Ama private method'lar baska classlardan ulasilamaz methodlardir.
+
+    Not: child'in access modifier'i parent'tan daha dar olamaz.
+    Ornek: parent public - child protected olamaz cunku bu hata,
+    Child class'ının eat metodunun, Parent class'ının eat metodundan daha az erişilebilir olmasından kaynaklanır.
+    */
+
+    // -------------------------------------------------------------------------------------
+
+    // Override isleminde access modifier’larin durumlarini ogrendik.
+    // Simdi de return type durumlarina bakalim.
+    // Parent icinde data type’i olan bir method olusturup child’da override edelim
+
+    // -------------------------------------------------------------------------------------
+
+    // Parent’ta int veri turunde bir method acip, child’da override etseydik ne olurdu?
+
+    // -------------------------------------------------------------------------------------
+
+    // Peki Parent’ta Class veri turunde bir method acip, child’da override etseydik ne olurdu?
+
     public void eat() {
         System.out.println("Animals eat...");
     }
+
+    public Animal create() { // Data type Animal'dir.
+        return new Animal(); // Animal üretip disari Animal verdiniz.
+    }
+
+    public int add(int num01, int num02) {
+        return num01 + num02;
+    }
+
+    public Integer multiply(Integer num01, Integer num02) {
+        return num01 * num02;
+    } // child'da override edecegiz... bir de super metod cagrisi.
 
     public void drink() {
         System.out.println("Animals drink...");
